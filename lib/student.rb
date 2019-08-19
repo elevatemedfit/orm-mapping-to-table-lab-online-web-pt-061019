@@ -1,4 +1,5 @@
 class Student
+
 attr_accessor :name, :grade
 attr_reader :id
 
@@ -19,11 +20,11 @@ def self.create_table
           DB[:conn].execute(sql)
 end
 
-def self.create(name:, grade:)
-  student = Student.new(name, grade)
-  student.save
-  student
-end
+# def self.create(name:, grade:)
+#   student = Student.new(name, grade)
+#   student.save
+#   student
+# end
 
 # def save
 #   sql = <<-SQL
