@@ -37,5 +37,13 @@ def save
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students") [0][0]
 end
 
+def self.drop_table
+    sql = <<-SQL
+      DROP TABLE students
+    SQL
+
+    DB[:conn].execute(sql)
+  end
+
 
 end
