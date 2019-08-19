@@ -26,14 +26,14 @@ def self.create(name:, grade:)
   student
 end
 
-# def save
-#   sql = <<-SQL
-#       INSERT INTO students (name, grade)
-#       VALUES (?, ?)
-#       SQL
-#
-#       DB[:conn].execute(sql, self.name, self.grade)
-# end
+def save
+  sql = <<-SQL
+      INSERT INTO students (name, grade)
+      VALUES (?, ?)
+      SQL
+
+      DB[:conn].execute(sql, self.name, self.grade)
+end
 
   # -- # Remember, you can access your database connection anywhere in this class
   # -- #  with DB[:conn]
